@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.navada.donit">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- maps permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.android.navada.donit.activities.SignInActivity"
+            android:configChanges="screenSize|orientation">
+        </activity>
+        <activity
+            android:name="com.android.navada.donit.activities.DonorSignUpActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="com.android.navada.donit.activities.OrganisationSignUpActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="com.android.navada.donit.activities.ResetPasswordActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="com.android.navada.donit.activities.MainActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="com.android.navada.donit.activities.VerificationActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="com.android.navada.donit.activities.OrganizationRequirementActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity android:name="com.android.navada.donit.activities.DonationLocationActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.android.navada.donit.activities.OrganizationLocationActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.android.navada.donit.activities.RequirementsEditorActivity"
+            android:configChanges="screenSize|orientation"/>
+
+        <activity android:name="com.android.navada.donit.activities.FirstActivity"
+            android:configChanges="orientation|screenSize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCEmhSA4pGx-7RhHebLuImBNzM4Vmh6ceQ"/>
+    </application>
+
+</manifest>
